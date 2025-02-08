@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Simulation</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>E-Commerce Simulation</h1>
+    <nav>
+      <button id="vendor-view">Vendor View</button>
+      <button id="user-view">User View</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Vendor Section -->
+    <section id="vendor-section" class="hidden">
+      <h2>Vendor Dashboard</h2>
+      <form id="add-product-form">
+        <input type="text" id="product-title" placeholder="Product Title" required>
+        <textarea id="product-description" placeholder="Description" required></textarea>
+        <input type="number" id="product-price" placeholder="Price" required>
+        <input type="text" id="product-category" placeholder="Category" required>
+        <input type="file" id="product-image" accept="image/*">
+        <button type="submit">Add Product</button>
+      </form>
+      <div id="vendor-product-list"></div>
+    </section>
+
+    <!-- User Section -->
+    <section id="user-section" class="hidden">
+      <h2>User Dashboard</h2>
+      <input type="text" id="search" placeholder="Search products...">
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+      </select>
+      <div id="user-product-list"></div>
+      <h3>Cart</h3>
+      <div id="cart"></div>
+      <button id="checkout">Checkout</button>
+      <h3>Order History</h3>
+      <div id="order-history"></div>
+    </section>
+  </main>
+
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/user.js"></script>
+</body>
+</html>
